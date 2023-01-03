@@ -92,6 +92,19 @@ class MainWindow(QMainWindow):
 		self.animation.setEndValue(newWidth)
 		self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
 		self.animation.start()
+
+	## Add mouse events to the window
+	def mousePressEvent(self, event):
+		self.clickPostion = event.globalPos()
+  
+	## Update button icon on minimizing or maximizing window
+	def restore_or_maximize_window(self):
+		if self.isMaximized():
+			self.showNormal()
+			self.ui.maximize_window_button.setIcon()
+		else:
+			self.showMaximized()
+			self.ui.maximize_window_button.setIcon()
 		
 
 
