@@ -35,6 +35,11 @@ class MainWindow(QMainWindow):
 		# self.ui.centralwidget.setGraphicsEffect(self.shadow)
 		## Window icon
 		# self.setWindowIcon(QIcon(""))
+		## Window title
+		self.setWindowTitle("Util Manager")
+  
+		## Window Size grip to resize window
+		QSizeGrip(self.ui.size_grip)
 		self.show()
 		
 
