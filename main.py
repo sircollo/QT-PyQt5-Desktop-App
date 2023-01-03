@@ -40,6 +40,14 @@ class MainWindow(QMainWindow):
   
 		## Window Size grip to resize window
 		QSizeGrip(self.ui.size_grip)
+  
+		# # Navigation Bar Click Events
+		# Minimize Window
+		self.ui.minimize_window_button.clicked.connect(lambda: self.showMinimized())
+  		# Maximize Window
+		self.ui.maximize_window_button.clicked.connect(lambda: self.showMaximized())
+		# Close Window
+		self.ui.close_window_button.clicked.connect(lambda: self.close())
 		self.show()
 		
 
