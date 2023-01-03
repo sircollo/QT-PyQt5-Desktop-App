@@ -49,6 +49,22 @@ class MainWindow(QMainWindow):
 		# Close Window
 		self.ui.close_window_button.clicked.connect(lambda: self.close())
   
+		## Stacked Pages Navigation
+		#cpu and memory page
+		self.ui.cpu_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.cpu_and_memory))
+		# Battery
+		self.ui.battery_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.battery))
+		# System info 
+		self.ui.system_inf_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.system_info))
+		# Activities
+		self.ui.activity_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.activities))
+		# Storage
+		self.ui.storage_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.storage))
+		# Sensors
+		self.ui.sensors_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.sensors))
+		# Networks
+		self.ui.networks_page_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.networks))
+  
   		## Function to drag window on mouse event on title bar
 		def moveWindow(e):
 			# detect if window is normal size
