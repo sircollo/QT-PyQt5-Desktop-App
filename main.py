@@ -78,6 +78,20 @@ class MainWindow(QMainWindow):
 		self.ui.header_frame.mouseMoveEvent = moveWindow
 		self.ui.open_close_side_bar_btn.clicked.connect(lambda: self.slideLeftMenu())
 		self.show()
+	## Slide Left menu function
+	def slideLeftMenu(self):
+		width = self.ui.left_menu_cont_frame.width()
+		if width ==40:
+			newWidth = 200
+		else:
+			newWidth = 40
+		# Animate the transition
+		self.animation = QPropertyAnimation(self.ui.left_menu_cont_frame, b"minimumWidth") #Animate minimumWidth
+		self.animation.setDuration(250)
+		self.animation.setStartValue(width)
+		self.animation.setEndValue(newWidth)
+		self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+		self.animation.start()
 		
 
 
