@@ -48,6 +48,19 @@ class MainWindow(QMainWindow):
 		self.ui.maximize_window_button.clicked.connect(lambda: self.showMaximized())
 		# Close Window
 		self.ui.close_window_button.clicked.connect(lambda: self.close())
+  
+  		## Function to drag window on mouse event on title bar
+		def moveWindow(e):
+			# detect if window is normal size
+			if self.isMaximized() == False:
+				# window is normal size and accept only left mouse
+				if e.buttons() == Qt.LeftButton:
+					self.move(self.pos() + e.globalpPos() - self.clickPosition)
+					self.clickPostion = e.globalPos()
+					e.accept()
+		# Add mouseEvent to top header to move the window
+		self.ui.header_frame.mouseMoveEvent = moveWindow
+		self.ui.open_close_side_bar_btn.clicked.connect(lambda: self.slideLeftMenu())
 		self.show()
 		
 
