@@ -194,7 +194,7 @@ class MainWindow(QMainWindow):
 		# CPU Main COre
 		cpu_main_core = psutil.cpu_count(logical=False)
 		self.ui.cpu_main_core.setText(str(cpu_main_core))
-  
+		QtCore.QTimer.singleShot(5000, self.cpu_ram)
 	# Get System information
 	def system_info(self):
 		time = datetime.datetime.now().strftime("%I:%M:%S %p")
