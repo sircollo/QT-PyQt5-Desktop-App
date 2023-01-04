@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceygdXxt.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceiEghfP.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -245,9 +245,9 @@ class Ui_MainWindow(object):
         self.label_16 = QtWidgets.QLabel(self.cpu_info_frame)
         self.label_16.setObjectName("label_16")
         self.gridLayout_2.addWidget(self.label_16, 0, 0, 1, 1)
-        self.label_17 = QtWidgets.QLabel(self.cpu_info_frame)
-        self.label_17.setObjectName("label_17")
-        self.gridLayout_2.addWidget(self.label_17, 0, 1, 1, 1)
+        self.cpu_count = QtWidgets.QLabel(self.cpu_info_frame)
+        self.cpu_count.setObjectName("cpu_count")
+        self.gridLayout_2.addWidget(self.cpu_count, 0, 1, 1, 1)
         self.label_19 = QtWidgets.QLabel(self.cpu_info_frame)
         self.label_19.setObjectName("label_19")
         self.gridLayout_2.addWidget(self.label_19, 1, 1, 1, 1)
@@ -855,7 +855,7 @@ class Ui_MainWindow(object):
         self.label_9.setText(_translate("MainWindow", "Sensors"))
         self.label_10.setText(_translate("MainWindow", "Networks"))
         self.label_16.setText(_translate("MainWindow", "CPU Count"))
-        self.label_17.setText(_translate("MainWindow", "N/A"))
+        self.cpu_count.setText(_translate("MainWindow", "N/A"))
         self.label_19.setText(_translate("MainWindow", "N/A"))
         self.label_20.setText(_translate("MainWindow", "CPU Main Core"))
         self.label_21.setText(_translate("MainWindow", "N/A"))

@@ -179,6 +179,11 @@ class MainWindow(QMainWindow):
 		# RAM Useage
 		ram_usage = str(psutil.virtual_memory()[2]) + ' %'
 		self.ui.ram_usage.setText(str("{}".format(ram_usage)))
+
+		# Number of processors
+		core = psutil.cpu_count()
+		self.ui.cpu_count.setText(str(core))
+  
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)
