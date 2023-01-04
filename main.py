@@ -207,5 +207,8 @@ class MainWindow(QMainWindow):
 if __name__=="__main__":
 	app = QApplication(sys.argv)
 	window = MainWindow()
+	qss = "Combinear.qss"
+	with open(qss,"r") as f:
+		app.setStyleSheet(f.read())
 	# window.showMaximized()
 	sys.exit(app.exec_())

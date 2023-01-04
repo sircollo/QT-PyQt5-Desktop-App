@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacewMIBGK.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceOtgmuh.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setSpacing(0)
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.left_menu_cont_frame = QtWidgets.QFrame(self.main_body_frame)
-        self.left_menu_cont_frame.setMinimumSize(QtCore.QSize(40, 0))
+        self.left_menu_cont_frame.setMinimumSize(QtCore.QSize(41, 0))
         self.left_menu_cont_frame.setMaximumSize(QtCore.QSize(20, 16777215))
         self.left_menu_cont_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.left_menu_cont_frame.setFrameShadow(QtWidgets.QFrame.Raised)

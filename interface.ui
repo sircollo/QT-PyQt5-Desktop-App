@@ -264,7 +264,7 @@ margin:0;</string>
         <widget class="QFrame" name="left_menu_cont_frame">
          <property name="minimumSize">
           <size>
-           <width>40</width>
+           <width>41</width>
            <height>0</height>
           </size>
          </property>
