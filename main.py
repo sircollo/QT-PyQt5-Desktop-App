@@ -84,6 +84,7 @@ class MainWindow(QMainWindow):
 		
 		self.show()	
 		self.battery()
+		self.cpu_ram()
 	## Slide Left menu function
 	def slideLeftMenu(self):
 		width = self.ui.left_menu_cont_frame.width()
@@ -148,7 +149,13 @@ class MainWindow(QMainWindow):
 			else:
 				self.ui.battery_status.setText("Fully Charged")
 			self.ui.battery_plugged.setText("No")
-
+   
+	# Get CPU and RAM information
+	def cpu_ram(self):
+		totalRam = 1.0
+		totalRam = psutil.virtual_memory()[0] * totalRam
+		totalRam = totalRam / (1024 * 1024 * 1024)
+		self.ui.total_ram.setText(str("{: .2f}".format(totalRam) + ' GB'))
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)

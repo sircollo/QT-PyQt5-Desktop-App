@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceoHLCdW.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacegRcqLA.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -279,9 +279,9 @@ class Ui_MainWindow(object):
         self.label_24 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_24.setObjectName("label_24")
         self.gridLayout_3.addWidget(self.label_24, 1, 0, 1, 1)
-        self.label_23 = QtWidgets.QLabel(self.ram_info_frame)
-        self.label_23.setObjectName("label_23")
-        self.gridLayout_3.addWidget(self.label_23, 0, 1, 1, 1)
+        self.total_ram = QtWidgets.QLabel(self.ram_info_frame)
+        self.total_ram.setObjectName("total_ram")
+        self.gridLayout_3.addWidget(self.total_ram, 0, 1, 1, 1)
         self.label_22 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_22.setObjectName("label_22")
         self.gridLayout_3.addWidget(self.label_22, 0, 0, 1, 1)
@@ -839,7 +839,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -864,7 +864,7 @@ class Ui_MainWindow(object):
         self.label_25.setText(_translate("MainWindow", "N/A"))
         self.label_27.setText(_translate("MainWindow", "N/A"))
         self.label_24.setText(_translate("MainWindow", "Available RAM"))
-        self.label_23.setText(_translate("MainWindow", "N/A"))
+        self.total_ram.setText(_translate("MainWindow", "N/A"))
         self.label_22.setText(_translate("MainWindow", "Total RAM"))
         self.label_29.setText(_translate("MainWindow", "N/A"))
         self.label_30.setText(_translate("MainWindow", "RAM Usage"))
