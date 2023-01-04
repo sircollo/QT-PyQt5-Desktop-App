@@ -12,6 +12,7 @@ import PySide2extn
 from PySide2extn.RoundProgressBar import roundProgressBar
 from PySide2extn.SpiralProgressBar import spiralProgressBar
 import time
+from multiprocessing import cpu_count
 ## Main Window Class
 class MainWindow(QMainWindow):
 	"""docstring for MainWindow"""
@@ -181,7 +182,7 @@ class MainWindow(QMainWindow):
 		self.ui.ram_usage.setText(str("{}".format(ram_usage)))
 
 		# Number of processors
-		core = psutil.cpu_count()
+		core = cpu_count()
 		self.ui.cpu_count.setText(str(core))
   
 		# CPU Percentage
