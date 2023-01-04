@@ -152,10 +152,18 @@ class MainWindow(QMainWindow):
    
 	# Get CPU and RAM information
 	def cpu_ram(self):
+		# total ram
 		totalRam = 1.0
 		totalRam = psutil.virtual_memory()[0] * totalRam
 		totalRam = totalRam / (1024 * 1024 * 1024)
 		self.ui.total_ram.setText(str("{: .2f}".format(totalRam) + ' GB'))
+
+		# availbale ram
+		available_ram = 1.0
+		available_ram = psutil.virtual_memory()[1] * available_ram
+		available_ram = available_ram / (1024 * 1024 * 1024)
+		self.ui.available_ram.setText(str("{: .2f}".format(available_ram) + ' GB'))
+
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)

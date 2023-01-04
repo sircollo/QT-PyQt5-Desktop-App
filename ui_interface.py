@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacegRcqLA.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacengNfQP.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -270,9 +270,9 @@ class Ui_MainWindow(object):
         self.label_26 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_26.setObjectName("label_26")
         self.gridLayout_3.addWidget(self.label_26, 2, 0, 1, 1)
-        self.label_25 = QtWidgets.QLabel(self.ram_info_frame)
-        self.label_25.setObjectName("label_25")
-        self.gridLayout_3.addWidget(self.label_25, 1, 1, 1, 1)
+        self.available_ram = QtWidgets.QLabel(self.ram_info_frame)
+        self.available_ram.setObjectName("available_ram")
+        self.gridLayout_3.addWidget(self.available_ram, 1, 1, 1, 1)
         self.label_27 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_27.setObjectName("label_27")
         self.gridLayout_3.addWidget(self.label_27, 2, 1, 1, 1)
@@ -861,7 +861,7 @@ class Ui_MainWindow(object):
         self.label_21.setText(_translate("MainWindow", "N/A"))
         self.label_18.setText(_translate("MainWindow", "CPU Per"))
         self.label_26.setText(_translate("MainWindow", "Used RAM"))
-        self.label_25.setText(_translate("MainWindow", "N/A"))
+        self.available_ram.setText(_translate("MainWindow", "N/A"))
         self.label_27.setText(_translate("MainWindow", "N/A"))
         self.label_24.setText(_translate("MainWindow", "Available RAM"))
         self.total_ram.setText(_translate("MainWindow", "N/A"))
