@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceiEghfP.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceGTLMiq.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -248,15 +248,15 @@ class Ui_MainWindow(object):
         self.cpu_count = QtWidgets.QLabel(self.cpu_info_frame)
         self.cpu_count.setObjectName("cpu_count")
         self.gridLayout_2.addWidget(self.cpu_count, 0, 1, 1, 1)
-        self.label_19 = QtWidgets.QLabel(self.cpu_info_frame)
-        self.label_19.setObjectName("label_19")
-        self.gridLayout_2.addWidget(self.label_19, 1, 1, 1, 1)
+        self.cpu_per = QtWidgets.QLabel(self.cpu_info_frame)
+        self.cpu_per.setObjectName("cpu_per")
+        self.gridLayout_2.addWidget(self.cpu_per, 1, 1, 1, 1)
         self.label_20 = QtWidgets.QLabel(self.cpu_info_frame)
         self.label_20.setObjectName("label_20")
         self.gridLayout_2.addWidget(self.label_20, 2, 0, 1, 1)
-        self.label_21 = QtWidgets.QLabel(self.cpu_info_frame)
-        self.label_21.setObjectName("label_21")
-        self.gridLayout_2.addWidget(self.label_21, 2, 1, 1, 1)
+        self.cpu_main_core = QtWidgets.QLabel(self.cpu_info_frame)
+        self.cpu_main_core.setObjectName("cpu_main_core")
+        self.gridLayout_2.addWidget(self.cpu_main_core, 2, 1, 1, 1)
         self.label_18 = QtWidgets.QLabel(self.cpu_info_frame)
         self.label_18.setObjectName("label_18")
         self.gridLayout_2.addWidget(self.label_18, 1, 0, 1, 1)
@@ -856,9 +856,9 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", "Networks"))
         self.label_16.setText(_translate("MainWindow", "CPU Count"))
         self.cpu_count.setText(_translate("MainWindow", "N/A"))
-        self.label_19.setText(_translate("MainWindow", "N/A"))
+        self.cpu_per.setText(_translate("MainWindow", "N/A"))
         self.label_20.setText(_translate("MainWindow", "CPU Main Core"))
-        self.label_21.setText(_translate("MainWindow", "N/A"))
+        self.cpu_main_core.setText(_translate("MainWindow", "N/A"))
         self.label_18.setText(_translate("MainWindow", "CPU Per"))
         self.label_26.setText(_translate("MainWindow", "Used RAM"))
         self.available_ram.setText(_translate("MainWindow", "N/A"))

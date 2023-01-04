@@ -184,6 +184,15 @@ class MainWindow(QMainWindow):
 		core = psutil.cpu_count()
 		self.ui.cpu_count.setText(str(core))
   
+		# CPU Percentage
+		cpu_per = psutil.cpu_percent()
+		self.ui.cpu_per.setText(str(cpu_per) + " %")
+  
+		# CPU Main COre
+		cpu_main_core = psutil.cpu_count(logical=False)
+		self.ui.cpu_main_core.setText(str(cpu_main_core))
+  
+  
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)

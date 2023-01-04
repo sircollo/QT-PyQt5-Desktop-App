@@ -576,7 +576,7 @@ margin:0;</string>
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QLabel" name="label_19">
+                  <widget class="QLabel" name="cpu_per">
                    <property name="text">
                     <string>N/A</string>
                    </property>
@@ -590,7 +590,7 @@ margin:0;</string>
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QLabel" name="label_21">
+                  <widget class="QLabel" name="cpu_main_core">
                    <property name="text">
                     <string>N/A</string>
                    </property>
