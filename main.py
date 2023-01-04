@@ -12,6 +12,7 @@ import PySide2extn
 from PySide2extn.RoundProgressBar import roundProgressBar
 from PySide2extn.SpiralProgressBar import spiralProgressBar
 import time
+import datetime
 from multiprocessing import cpu_count
 ## Main Window Class
 class MainWindow(QMainWindow):
@@ -86,6 +87,7 @@ class MainWindow(QMainWindow):
 		self.show()	
 		self.battery()
 		self.cpu_ram()
+		self.system_info()
 	## Slide Left menu function
 	def slideLeftMenu(self):
 		width = self.ui.left_menu_cont_frame.width()
@@ -193,6 +195,12 @@ class MainWindow(QMainWindow):
 		cpu_main_core = psutil.cpu_count(logical=False)
 		self.ui.cpu_main_core.setText(str(cpu_main_core))
   
+	# Get System information
+	def system_info(self):
+		time = datetime.datetime.now().strftime("%I:%M:%S %p")
+		self.ui.system_time.setText(str(time))
+		date = datetime.datetime.now().strftime("%Y-%m-%d")
+		self.ui.system_date.setText(str(date))
   
 ## Execute App
 if __name__=="__main__":

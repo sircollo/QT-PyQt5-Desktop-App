@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceGTLMiq.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacewMIBGK.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -685,9 +685,9 @@ class Ui_MainWindow(object):
         self.label_45.setFont(font)
         self.label_45.setObjectName("label_45")
         self.gridLayout_4.addWidget(self.label_45, 5, 0, 1, 1)
-        self.label_48 = QtWidgets.QLabel(self.frame_7)
-        self.label_48.setObjectName("label_48")
-        self.gridLayout_4.addWidget(self.label_48, 5, 1, 1, 1)
+        self.system_date = QtWidgets.QLabel(self.frame_7)
+        self.system_date.setObjectName("system_date")
+        self.gridLayout_4.addWidget(self.system_date, 5, 1, 1, 1)
         self.label_51 = QtWidgets.QLabel(self.frame_7)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -712,9 +712,9 @@ class Ui_MainWindow(object):
         self.label_50.setFont(font)
         self.label_50.setObjectName("label_50")
         self.gridLayout_4.addWidget(self.label_50, 4, 2, 1, 1)
-        self.label_54 = QtWidgets.QLabel(self.frame_7)
-        self.label_54.setObjectName("label_54")
-        self.gridLayout_4.addWidget(self.label_54, 5, 3, 1, 1)
+        self.system_time = QtWidgets.QLabel(self.frame_7)
+        self.system_time.setObjectName("system_time")
+        self.gridLayout_4.addWidget(self.system_time, 5, 3, 1, 1)
         self.label_53 = QtWidgets.QLabel(self.frame_7)
         self.label_53.setObjectName("label_53")
         self.gridLayout_4.addWidget(self.label_53, 4, 3, 1, 1)
@@ -839,7 +839,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(6)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -984,11 +984,11 @@ class Ui_MainWindow(object):
         self.label_46.setText(_translate("MainWindow", "N/A"))
         self.label_47.setText(_translate("MainWindow", "N/A"))
         self.label_45.setText(_translate("MainWindow", "System Date"))
-        self.label_48.setText(_translate("MainWindow", "N/A"))
+        self.system_date.setText(_translate("MainWindow", "N/A"))
         self.label_51.setText(_translate("MainWindow", "System Time"))
         self.label_49.setText(_translate("MainWindow", "Processor"))
         self.label_50.setText(_translate("MainWindow", "Machine"))
-        self.label_54.setText(_translate("MainWindow", "N/A"))
+        self.system_time.setText(_translate("MainWindow", "N/A"))
         self.label_53.setText(_translate("MainWindow", "N/A"))
         self.label_42.setText(_translate("MainWindow", "N/A"))
         self.label_11.setText(_translate("MainWindow", "About"))
