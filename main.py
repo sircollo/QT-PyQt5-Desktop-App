@@ -201,6 +201,7 @@ class MainWindow(QMainWindow):
 		self.ui.system_time.setText(str(time))
 		date = datetime.datetime.now().strftime("%Y-%m-%d")
 		self.ui.system_date.setText(str(date))
+		QtCore.QTimer.singleShot(1000, self.system_info)
   
 ## Execute App
 if __name__=="__main__":
