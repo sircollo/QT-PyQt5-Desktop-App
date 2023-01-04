@@ -152,7 +152,7 @@ class MainWindow(QMainWindow):
 			else:
 				self.ui.battery_status.setText("Fully Charged")
 			self.ui.battery_plugged.setText("No")
-   
+		QtCore.QTimer.singleShot(5000, self.battery)
 	# Get CPU and RAM information
 	def cpu_ram(self):
 		# total ram
