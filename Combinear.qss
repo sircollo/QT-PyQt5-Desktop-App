@@ -240,8 +240,8 @@ QLineEdit
 	background-color: #131313;
 	color : #eee;
 	border: 1px solid #343434;
-	border-radius: 2px;
-	padding: 3px;
+	border-radius: 5px;
+	padding: 7px;
 	padding-left: 5px;
 
 }
