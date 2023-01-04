@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacezxBjCq.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceygdXxt.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -285,15 +285,15 @@ class Ui_MainWindow(object):
         self.label_22 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_22.setObjectName("label_22")
         self.gridLayout_3.addWidget(self.label_22, 0, 0, 1, 1)
-        self.label_29 = QtWidgets.QLabel(self.ram_info_frame)
-        self.label_29.setObjectName("label_29")
-        self.gridLayout_3.addWidget(self.label_29, 3, 1, 1, 1)
+        self.free_ram = QtWidgets.QLabel(self.ram_info_frame)
+        self.free_ram.setObjectName("free_ram")
+        self.gridLayout_3.addWidget(self.free_ram, 3, 1, 1, 1)
         self.label_30 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_30.setObjectName("label_30")
         self.gridLayout_3.addWidget(self.label_30, 4, 0, 1, 1)
-        self.label_31 = QtWidgets.QLabel(self.ram_info_frame)
-        self.label_31.setObjectName("label_31")
-        self.gridLayout_3.addWidget(self.label_31, 4, 1, 1, 1)
+        self.ram_usage = QtWidgets.QLabel(self.ram_info_frame)
+        self.ram_usage.setObjectName("ram_usage")
+        self.gridLayout_3.addWidget(self.ram_usage, 4, 1, 1, 1)
         self.label_28 = QtWidgets.QLabel(self.ram_info_frame)
         self.label_28.setObjectName("label_28")
         self.gridLayout_3.addWidget(self.label_28, 3, 0, 1, 1)
@@ -866,9 +866,9 @@ class Ui_MainWindow(object):
         self.label_24.setText(_translate("MainWindow", "Available RAM"))
         self.total_ram.setText(_translate("MainWindow", "N/A"))
         self.label_22.setText(_translate("MainWindow", "Total RAM"))
-        self.label_29.setText(_translate("MainWindow", "N/A"))
+        self.free_ram.setText(_translate("MainWindow", "N/A"))
         self.label_30.setText(_translate("MainWindow", "RAM Usage"))
-        self.label_31.setText(_translate("MainWindow", "N/A"))
+        self.ram_usage.setText(_translate("MainWindow", "N/A"))
         self.label_28.setText(_translate("MainWindow", "Free RAM"))
         self.label_32.setText(_translate("MainWindow", "Battery Information"))
         self.label_33.setText(_translate("MainWindow", "Status"))

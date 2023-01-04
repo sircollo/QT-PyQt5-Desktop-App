@@ -169,6 +169,16 @@ class MainWindow(QMainWindow):
 		used_ram = psutil.virtual_memory()[3] * used_ram
 		used_ram = used_ram / (1024 * 1024 * 1024)
 		self.ui.used_ram.setText(str("{: .2f}".format(used_ram) + ' GB'))
+  
+		# free RAM
+		free_ram = 1.0
+		free_ram = psutil.virtual_memory()[4] * free_ram
+		free_ram = free_ram / (1024 * 1024 * 1024)
+		self.ui.free_ram.setText(str("{: .2f}".format(free_ram) + ' GB'))
+  
+		# RAM Useage
+		ram_usage = str(psutil.virtual_memory()[2]) + ' %'
+		self.ui.ram_usage.setText(str("{}".format(ram_usage)))
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)
