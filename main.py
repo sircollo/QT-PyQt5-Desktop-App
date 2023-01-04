@@ -2,12 +2,16 @@ import sys
 import os
 from PySide2 import *
 from PyQt5.QtCore import Qt, QPoint, QPropertyAnimation
-from PyQt5.QtWidgets import QApplication, QMainWindow, QSizeGrip, QShortcut
+from PyQt5.QtWidgets import QApplication, QMainWindow, QSizeGrip, QShortcut, QPushButton
 # Import QT Material
 from qt_material import *
 from ui_interface import *
 from PyQt5.QtGui import QKeySequence
-
+import psutil
+import PySide2extn
+from PySide2extn.RoundProgressBar import roundProgressBar
+from PySide2extn.SpiralProgressBar import spiralProgressBar
+import time
 ## Main Window Class
 class MainWindow(QMainWindow):
 	"""docstring for MainWindow"""
@@ -77,7 +81,9 @@ class MainWindow(QMainWindow):
 		# Add mouseEvent to top header to move the window
 		self.ui.header_frame.mouseMoveEvent = moveWindow
 		self.ui.open_close_side_bar_btn.clicked.connect(lambda: self.slideLeftMenu())
-		self.show()
+		
+		self.show()	
+		self.battery()
 	## Slide Left menu function
 	def slideLeftMenu(self):
 		width = self.ui.left_menu_cont_frame.width()
@@ -105,9 +111,43 @@ class MainWindow(QMainWindow):
 		else:
 			self.showMaximized()
 			self.ui.maximize_window_button.setIcon()
-		
+   
+   	# Fuction to convert seconds to hours
+	def secs2hours(self, seconds):
+		minutes, seconds = divmod(seconds, 60)
+		hours, minutes = divmod(minutes, 60)
+		return "%d:%02d:%02d (H:M:S)" % (hours, minutes, seconds)
+	#####################################################
+	## Get System battery Information
+	#####################################################
+	def battery(self):
+		batt = psutil.sensors_battery()
+		# print("Battery percentage : ", batt.percent)
 
+		if not hasattr(psutil, "sensors_battery"):
+			self.ui.battery_status.setText("Platform not supported")
+		if batt is None:
+			self.ui.battery_status.setText("No battery Installed")
+		if batt.power_plugged:
+			self.ui.battery_charge.setText(str(round(batt.percent, 2))+"%")
+			self.ui.battery_time_left.setText("N/A")
 
+			if batt.percent < 100:
+				self.ui.battery_status.setText("Charging")
+			else:
+				self.ui.battery_status.setText("Fully Charged")
+
+			self.ui.battery_plugged.setText("Yes")
+
+		else:
+			self.ui.battery_charge.setText(str(round(batt.percent, 2))+"%")
+			self.ui.battery_time_left.setText(self.secs2hours(batt.secsleft))
+
+			if batt.percent < 100:
+				self.ui.battery_status.setText("Discharging")
+			else:
+				self.ui.battery_status.setText("Fully Charged")
+			self.ui.battery_plugged.setText("No")
 
 ## Execute App
 if __name__=="__main__":
