@@ -551,7 +551,7 @@ margin:0;</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>3</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="cpu_and_memory">
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -993,6 +993,11 @@ margin:0;</string>
                   <string>Free Storage</string>
                  </property>
                 </column>
+                <column>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </column>
                </widget>
               </item>
              </layout>
@@ -1014,7 +1019,7 @@ margin:0;</string>
                </widget>
               </item>
               <item>
-               <widget class="QTableWidget" name="tableWidget_3">
+               <widget class="QTableWidget" name="sensorTable">
                 <column>
                  <property name="text">
                   <string>Sensor</string>
@@ -1056,8 +1061,8 @@ margin:0;</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>192</width>
-                   <height>448</height>
+                   <width>373</width>
+                   <height>456</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1100,7 +1105,7 @@ margin:0;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QTableWidget" name="tableWidget_4">
+                      <widget class="QTableWidget" name="net_stats_table">
                        <column>
                         <property name="text">
                          <string/>
@@ -1114,6 +1119,11 @@ margin:0;</string>
                        <column>
                         <property name="text">
                          <string>Duplex</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Speed</string>
                         </property>
                        </column>
                        <column>
@@ -1732,6 +1742,7 @@ margin:0;</string>
  </widget>
  <resources>
   <include location="icons.qrc"/>
+  <include location="C:/Users/Frosted/.designer/backup/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

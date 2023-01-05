@@ -100,6 +100,8 @@ class MainWindow(QMainWindow):
 		self.system_info()
 		self.processes()
 		self.storage()
+		self.sensors()
+		self.networks()
 	## Slide Left menu function
 	def slideLeftMenu(self):
 		width = self.ui.left_menu_cont_frame.width()
@@ -311,7 +313,48 @@ class MainWindow(QMainWindow):
 			progressBar.setObjectName(u"progressBar")
 			progressBar.setValue(full_disk)
 			self.ui.storageTable.setCellWidget(rowPosition, 9, progressBar)
-## Execute App
+   
+	# sensors
+	def sensors(self):
+		# if sys.platform == "linux" or sys.platform == "linux1" or sys.platform == "linux2":
+		try:
+			for x in psutil.sensors_temperatures():
+				for y in psutil.sensors_temperatures()[x]:
+					rowPosition = self.ui.sensorTable.rowCount()
+					self.ui.sensorTable.insertRow(rowPosition)
+
+					self.create_table_widget(rowPosition, 0, x, "sensorTable")
+					self.create_table_widget(rowPosition, 1, y.label, "sensorTable")
+					self.create_table_widget(rowPosition, 2, str(y.current), "sensorTable")
+					self.create_table_widget(rowPosition, 3, str(y.high), "sensorTable")
+					self.create_table_widget(rowPosition, 4, str(y.critical), "sensorTable")
+		except Exception as e:
+			print(e)
+  		# else:
+		# 	global platforms
+		# 	rowPosition = self.ui.sensorTable.rowCount()
+		# 	self.ui.sensorTable.insertRow(rowPosition)
+
+		# 	self.create_table_widget(rowPosition, 0, "Function not supported on " + platforms[sys.platform], "sensorTable")
+		# 	self.create_table_widget(rowPosition, 1, "N/A", "sensorTable")
+		# 	self.create_table_widget(rowPosition, 2, "N/A", "sensorTable")
+		# 	self.create_table_widget(rowPosition, 3, "N/A", "sensorTable")
+		# 	self.create_table_widget(rowPosition, 4, "N/A", "sensorTable")
+		# 	self.create_table_widget(rowPosition, 5, "N/A", "sensorTable")
+  
+	def networks(self):
+		for x in psutil.net_if_stats():
+			z = psutil.net_if_stats()
+			print(x)
+			rowPosition = self.ui.net_stats_table.rowCount()
+			self.ui.net_stats_table.insertRow(rowPosition)
+   
+			self.create_table_widget(rowPosition, 0, x, "net_stats_table")
+			self.create_table_widget(rowPosition, 1, str(z[x].isup), "net_stats_table")
+			self.create_table_widget(rowPosition, 2, str(z[x].duplex), "net_stats_table")
+			self.create_table_widget(rowPosition, 3, str(z[x].speed), "net_stats_table")
+			self.create_table_widget(rowPosition, 4, str(z[x].mtu), "net_stats_table")
+# ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)
 	window = MainWindow()
