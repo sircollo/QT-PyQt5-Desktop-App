@@ -195,6 +195,7 @@ class MainWindow(QMainWindow):
 		cpu_main_core = psutil.cpu_count(logical=False)
 		self.ui.cpu_main_core.setText(str(cpu_main_core))
 		QtCore.QTimer.singleShot(5000, self.cpu_ram)
+  
 	# Get System information
 	def system_info(self):
 		time = datetime.datetime.now().strftime("%I:%M:%S %p")
@@ -202,6 +203,12 @@ class MainWindow(QMainWindow):
 		date = datetime.datetime.now().strftime("%Y-%m-%d")
 		self.ui.system_date.setText(str(date))
 		QtCore.QTimer.singleShot(1000, self.system_info)
+  
+		self.ui.system_machine.setText(platform.machine())
+		self.ui.system_version.setText(platform.version())
+		self.ui.system_platform.setText(platform.platform())
+		self.ui.system_system.setText(platform.system())
+		self.ui.system_processor.setText(platform.processor())
   
 ## Execute App
 if __name__=="__main__":
