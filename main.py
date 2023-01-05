@@ -2,7 +2,7 @@ import sys
 import os
 from PySide2 import *
 from PyQt5.QtCore import Qt, QPoint, QPropertyAnimation
-from PyQt5.QtWidgets import QApplication, QMainWindow, QSizeGrip, QShortcut, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QSizeGrip, QShortcut, QPushButton, QTableWidgetItem
 # Import QT Material
 from qt_material import *
 from ui_interface import *
@@ -88,6 +88,7 @@ class MainWindow(QMainWindow):
 		self.battery()
 		self.cpu_ram()
 		self.system_info()
+		self.processes()
 	## Slide Left menu function
 	def slideLeftMenu(self):
 		width = self.ui.left_menu_cont_frame.width()
@@ -209,7 +210,60 @@ class MainWindow(QMainWindow):
 		self.ui.system_platform.setText(platform.platform())
 		self.ui.system_system.setText(platform.system())
 		self.ui.system_processor.setText(platform.processor())
+	
+	# function to create table widgets
+	def create_table_widget(self, rowPosition, columnPosition, text, tableName):
+		qtablewidgetitem = QTableWidgetItem()
+		getattr(self.ui, tableName).setItem(rowPosition,columnPosition, qtablewidgetitem)
+		qtablewidgetitem = getattr(self.ui, tableName).item(rowPosition, columnPosition)
   
+		qtablewidgetitem.setText(text)
+ 
+	# Get running processes/Activities
+	def processes(self):
+		for x in psutil.pids():
+			rowPosition = self.ui.tableWidget.rowCount()
+			self.ui.tableWidget.insertRow(rowPosition)
+
+			try:
+				process = psutil.Process(x)
+
+				self.create_table_widget(rowPosition,0,str(process.pid),"tableWidget")
+				self.create_table_widget(rowPosition,1,str(process.name()),"tableWidget")
+				self.create_table_widget(rowPosition,2,str(process.status()),"tableWidget")
+				self.create_table_widget(rowPosition,3,str(datetime.datetime.utcfromtimestamp(process.create_time()).strftime('%Y-%m-%d %H:%M:%S')),"tableWidget")
+    
+				# create a cell widget
+				suspend_btn = QPushButton(self.ui.tableWidget)
+				suspend_btn.setText('Suspend')
+				suspend_btn.setStyleSheet("color: brown")
+				self.ui.tableWidget.setCellWidget(rowPosition, 4, suspend_btn)
+
+				resume_btn = QPushButton(self.ui.tableWidget)
+				resume_btn.setText('Resume')
+				resume_btn.setStyleSheet("color: green")
+				self.ui.tableWidget.setCellWidget(rowPosition, 5, resume_btn)
+    
+				terminate_btn = QPushButton(self.ui.tableWidget)
+				terminate_btn.setText('Terminate')
+				terminate_btn.setStyleSheet("color: orange")
+				self.ui.tableWidget.setCellWidget(rowPosition, 6, terminate_btn)
+    
+				kill_btn = QPushButton(self.ui.tableWidget)
+				kill_btn.setText('Kill')
+				kill_btn.setStyleSheet("color: red")
+				self.ui.tableWidget.setCellWidget(rowPosition, 7, kill_btn)
+			except Exception as e:
+				# handle exception when a process ID is not found
+				print(e)
+		self.ui.activity_search.textChanged.connect(self.findName)
+	
+	# search activity table
+	def findName(self):
+		name = self.ui.activity_search.text().lower()
+		for row in range(self.ui.tableWidget.rowCount()):
+			item = self.ui.tableWidget.item(row, 1)
+			self.ui.tableWidget.setRowHidden(row, name not in item.text().lower())
 ## Execute App
 if __name__=="__main__":
 	app = QApplication(sys.argv)

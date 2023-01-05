@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfaceQswheB.ui'
+# Form implementation generated from reading ui file 'C:/Users/Frosted/AppData/Local/Temp/interfacebEiieY.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -368,9 +368,9 @@ class Ui_MainWindow(object):
         self.frame_11.setObjectName("frame_11")
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.frame_11)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
-        self.lineEdit = QtWidgets.QLineEdit(self.frame_11)
-        self.lineEdit.setObjectName("lineEdit")
-        self.horizontalLayout_12.addWidget(self.lineEdit, 0, QtCore.Qt.AlignRight)
+        self.activity_search = QtWidgets.QLineEdit(self.frame_11)
+        self.activity_search.setObjectName("activity_search")
+        self.horizontalLayout_12.addWidget(self.activity_search, 0, QtCore.Qt.AlignRight)
         self.pushButton_6 = QtWidgets.QPushButton(self.frame_11)
         self.pushButton_6.setText("")
         icon11 = QtGui.QIcon()
@@ -726,7 +726,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.system_system.setFont(font)
         self.system_system.setObjectName("system_system")
-        self.gridLayout_4.addWidget(self.system_system, 0, 1, 1, 1, QtCore.Qt.AlignTop)
+        self.gridLayout_4.addWidget(self.system_system, 2, 0, 1, 1)
         self.verticalLayout_7.addWidget(self.frame_7)
         self.stackedWidget.addWidget(self.system_info)
         self.verticalLayout_4.addWidget(self.stackedWidget)
@@ -840,7 +840,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -881,7 +881,7 @@ class Ui_MainWindow(object):
         self.label_36.setText(_translate("MainWindow", "Plugged In"))
         self.battery_plugged.setText(_translate("MainWindow", "N/A"))
         self.label_55.setText(_translate("MainWindow", "Activities"))
-        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Search Processes"))
+        self.activity_search.setPlaceholderText(_translate("MainWindow", "Search Processes"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Process ID"))
         item = self.tableWidget.horizontalHeaderItem(1)
