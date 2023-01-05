@@ -551,7 +551,7 @@ margin:0;</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="cpu_and_memory">
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -952,7 +952,7 @@ margin:0;</string>
                </widget>
               </item>
               <item>
-               <widget class="QTableWidget" name="tableWidget_2">
+               <widget class="QTableWidget" name="storageTable">
                 <column>
                  <property name="text">
                   <string>Device</string>
