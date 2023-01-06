@@ -1160,7 +1160,7 @@ margin:0;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QTableWidget" name="tableWidget_5">
+                      <widget class="QTableWidget" name="net_io_table">
                        <column>
                         <property name="text">
                          <string/>
@@ -1235,7 +1235,7 @@ margin:0;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QTableWidget" name="tableWidget_6">
+                      <widget class="QTableWidget" name="net_addresses_table">
                        <column>
                         <property name="text">
                          <string/>
@@ -1295,7 +1295,7 @@ margin:0;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QTableWidget" name="tableWidget_7">
+                      <widget class="QTableWidget" name="net_connections_table">
                        <column>
                         <property name="text">
                          <string>FD</string>
